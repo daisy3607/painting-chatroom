@@ -1,0 +1,67 @@
+html, body{
+	height: 100%;
+	margin: 0%;
+	
+}
+.LoginContainer {
+
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url('https://i.imgur.com/aBHkh.gif') no-repeat;
+    background-size: 100% auto;
+}
+
+.LoginWrapper {
+	height: 50vh;
+	width: 20vw;
+	background-color: rgba(0, 0, 0, 0.8);
+	
+	padding: 5vh;
+}
+
+h2 {
+	margin-top: 1vh;
+	font-size: 7vh;
+    font-weight: 100;
+    color:  #ffffff;
+}
+
+.inputPlace {
+	margin-top: 7vh;
+	margin-bottom: 3vh;
+}
+
+input {
+	border: 1px solid rgb(255, 250, 97);
+	background-color: rgba(0, 0, 0, 0.8);
+	color: gray;
+	font-weight: 100;
+	font-size: 1vw;
+	margin-bottom: 3vh;
+	padding: 2vh 5vh 2vh 5vh;
+}
+
+button {
+	padding: 2vh 10vh 2vh 10vh;
+	border: 1px solid rgb(255, 250, 97);
+	background-color: rgb(255, 250, 97);
+	font-size: 3vh;
+}
+
+button:hover {
+	padding: 2vh 10vh 2vh 10vh;
+	border: 1px solid rgb(255, 250, 97);
+	background-color: rgba(0, 0, 0, 0.8);
+	color: white;
+	font-size: 3vh;
+}
+
+p {
+  color: white;
+  font-weight: 100;
+  font-size: 2vh;
+}
