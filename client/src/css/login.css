@@ -35,7 +35,7 @@ h2 {
 	margin-bottom: 0vh;
 }
 
-input {
+.input-frame {
 	border: 1px solid rgb(255, 250, 97);
 	background-color: rgba(0, 0, 0, 0.8);
 	color: gray;
@@ -45,15 +45,14 @@ input {
 	padding: 2vh 5vh 2vh 5vh;
 }
 
-button {
+.log-in {
 	padding: 2vh 10vh 2vh 10vh;
 	border: 1px solid rgb(255, 250, 97);
-	margin-bottom: 1px;
 	background-color: rgb(255, 250, 97);
 	font-size: 3vh;
 }
 
-button:hover {
+.log-in:hover {
 	padding: 2vh 10vh 2vh 10vh;
 	border: 1px solid rgb(255, 250, 97);
 	background-color: rgba(0, 0, 0, 0.8);

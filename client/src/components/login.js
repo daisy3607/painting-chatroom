@@ -58,9 +58,9 @@ export default class Login extends Component {
         <div className="LoginWrapper">
           <h2> Login </h2>
           <div className="inputPlace">
-            <input type="text" placeholder="請輸入帳號" value={this.state.account} onChange={(e) => this.handleAccountChange(e)}></input>
+            <input type="text" className="input-frame" placeholder="請輸入帳號" value={this.state.account} onChange={(e) => this.handleAccountChange(e)}></input>
             <br/>
-            <input type="password" placeholder="請輸入密碼" value={this.state.password} onChange={(e) => this.handlePassChange(e)} onKeyPress={this.handleKeyPress}></input>
+            <input type="password"  className="input-frame" placeholder="請輸入密碼" value={this.state.password} onChange={(e) => this.handlePassChange(e)} onKeyPress={this.handleKeyPress}></input>
           </div>
           <button className="log-in" onClick={this.checkAccount}>登入</button>
           <button className="log-in" onClick={this.checkAccount}>註冊</button>

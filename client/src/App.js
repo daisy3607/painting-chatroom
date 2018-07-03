@@ -42,7 +42,7 @@ export default class App extends Component {
   render() {
     return (
       <div className="App">
-        <div className="register"><Login /></div>
+        {/* <div className="register"><Login /></div> */}
         <nav className="navbar">
           <div className="user">
             user
@@ -57,7 +57,7 @@ export default class App extends Component {
           </div>  
         </nav>
         <div className="content-wrapper">        
-          {/* <ChatRoom /> */}
+          <ChatRoom />
         </div>
       </div>
     );
