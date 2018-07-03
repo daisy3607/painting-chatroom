@@ -1,0 +1,81 @@
+.ChatRoom-Container {
+	height:100%;
+	width:100%;
+	display: flex;
+	flex-direction: column;
+	font-weight: 100;
+	/* overflow: hidden; */
+}
+
+.msg-room {
+	height: 85%;
+	overflow-y: auto;
+	width: 100%;
+}
+
+.msg-room > li {
+	list-style: none;
+	text-align: left;
+	max-width: 80%;
+	display: flex;
+	flex-direction: row;
+
+	
+	margin-bottom: 2vh;
+
+}
+
+
+.msg-block > img {
+	margin-left: 1vw;
+	max-height: 20vh;
+	width: auto;
+}
+
+
+h4 {
+	margin: auto 0;
+	
+}
+
+img {
+  max-height: 50vh;
+  width: auto;
+}
+
+.input-area {
+	border: 2px solid rgb(31, 23, 23);
+	border-radius: 5px;
+	height: 15%;
+	margin: 5px;
+	display: flex;
+	flex-direction: row;
+	padding-right: 1vw;
+}
+
+.input-area > button {
+	border-left: 2px solid rgb(31, 23, 23);
+	border: none;
+	background: transparent;
+	
+}
+
+.input-area > button:hover {
+	
+	background-color: rgb(228, 228, 228);
+	color: #ffffff;
+	
+}
+
+.input-area > input {
+	height: 92%;
+	width: 99%;
+	border: none;
+	font-size: 3vh;
+	padding: 0;
+}
+
+.btn > img {
+	max-height: 5vh;
+}
+

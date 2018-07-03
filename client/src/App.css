@@ -1,7 +1,10 @@
 html, body {
   height: 100vh;
+  
   font-family: 'Microsoft JhengHei', '微軟正黑體', sans-serif;
 }
+
+
 
 .App {
   height: 100%;
@@ -10,7 +13,8 @@ html, body {
   text-align: center;
   display: flex;
   flex-direction: row;
-  overflow-y: hidden;
+  overflow: hidden;
+  
 }
 
 nav {
@@ -55,6 +59,7 @@ nav {
 
 .menu li {
   padding: 3vh;
+  padding-right: 0;
   list-style-type: None;
   text-align: center;
 }
@@ -64,4 +69,9 @@ nav {
   list-style-type: None;
   text-align: center;
   background-color: rgb(255, 252, 172);
+}
+
+.content-wrapper {
+  
+  width: 100%;
 }

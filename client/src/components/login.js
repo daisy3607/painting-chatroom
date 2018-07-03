@@ -63,6 +63,7 @@ export default class Login extends Component {
             <input type="password" placeholder="請輸入密碼" value={this.state.password} onChange={(e) => this.handlePassChange(e)} onKeyPress={this.handleKeyPress}></input>
           </div>
           <button className="log-in" onClick={this.checkAccount}>登入</button>
+          <button className="log-in" onClick={this.checkAccount}>註冊</button>
           <br />
           {this.state.failMsg? <p>帳號或密碼輸入錯誤，請再次輸入</p>: null}
         </div>
