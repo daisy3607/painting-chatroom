@@ -42,7 +42,7 @@ export default class App extends Component {
   render() {
     return (
       <div className="App">
-        {/* <div className="register"><Login /></div> */}
+        
         <nav className="navbar">
           <div className="user">
             user
