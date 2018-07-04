@@ -4,6 +4,8 @@ import DashBoard from './components/dashboard.js';
 import Login from './components/login.js';
 import avatar from './images/avatar.png';
 import io from 'socket.io-client';
+import SketchField from './components/SketchField'
+
 import './App.css';
 
 
@@ -23,8 +25,8 @@ export default class App extends Component {
     .then(res => this.setState(console.log(res.data)))
     // .then(res => this.setState({ msg_database: res.data }))
     .catch(err => console.log(err));
-    
-    // this.state.socket.on('realtime chatting', this.handleNewMsg);  
+
+    // this.state.socket.on('realtime chatting', this.handleNewMsg);
   }
 
   // handleNewMsg = (author,  msg) => {
@@ -43,9 +45,9 @@ export default class App extends Component {
 
 
   callApi = async () => {
-    const response = await fetch('/data');    
+    const response = await fetch('/data');
     const body = await response.json();
-    
+
     if (response.status !== 200) throw Error(body.message);
     return body;
   }
@@ -57,15 +59,13 @@ export default class App extends Component {
         <ul className="navbar">
           <li className="group-title"><h3>顆顆顆顆顆小組</h3></li>
           <li className="user"><img src={avatar}></img><span>username</span></li>
-          
+
           <li className="function-map">
             <div onClick={this.handleDashBoard}>Tasks</div>
           </li>
           <li className="channel-map">
             <span>channel</span>
             <ul className="inside-list">
-              <li>channel 1</li>
-              <li>channel 1</li>
               <li>channel 1</li>
               <li>channel 1</li>
             </ul>
@@ -92,11 +92,12 @@ export default class App extends Component {
           <li className="sign-out-map">
             <div className="sign-out">sign out</div>
           </li>
- 
+
         </ul>
-        <div className="content-wrapper">        
+        <div className="content-wrapper">
           {/* <ChatRoom /> */}
-          <DashBoard todos={this.state.todos} addTodo={this.addTodo}/>
+          <ChatRoom socket={this.state.socket} username="test1" / >
+          {/* <DashBoard todos={this.state.todos} addTodo={this.addTodo} /> */}
         </div>
       </div>
     );
