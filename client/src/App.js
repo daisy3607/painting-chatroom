@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import ChatRoom from './components/chatroom.js';
 import Login from './components/login.js';
+import avatar from './images/avatar.png';
 import io from 'socket.io-client';
 
 import './App.css';
@@ -42,20 +43,47 @@ export default class App extends Component {
   render() {
     return (
       <div className="App">
-        
-        <nav className="navbar">
-          <div className="user">
-            user
-            {/* <img src={avatar}></img> */}
-            {/* <h3>{this.state.userName}</h3> */}
-          </div>
-          <div className="menu">
-            <ul>
-                <li onClick={this.handleDashBoard}>Dashboard</li>
-                <li><div onClick={this.handleNoDashBoard}>BrainStorming</div></li>
+        {/* <Login /> */}
+        <ul className="navbar">
+          <li className="group-title"><h3>顆顆顆顆顆小組</h3></li>
+          <li className="user"><img src={avatar}></img><span>username</span></li>
+          
+          <li className="function-map">
+            <div onClick={this.handleDashBoard}>Dashboard</div>
+          </li>
+          <li className="channel-map">
+            <span>channel</span>
+            <ul className="inside-list">
+              <li>channel 1</li>
+              <li>channel 1</li>
+              <li>channel 1</li>
+              <li>channel 1</li>
             </ul>
-          </div>  
-        </nav>
+          </li>
+          <li className="direct-msg-map">
+            <span>Direct Message</span>
+            <ul className="inside-list">
+              <li>channel 1</li>
+              <li>channel 1</li>
+              <li>channel 1</li>
+              <li>channel 1</li>
+            </ul>
+          </li>
+          <li className="online-user-map">
+            <span>online users</span>
+            <ul className="user-inside-list">
+              <li>user 1</li>
+              <li>user 1</li>
+              <li>user 1</li>
+              <li>user 1</li>
+            </ul>
+          </li>
+
+          <li className="sign-out-map">
+            <div className="sign-out">sign out</div>
+          </li>
+ 
+        </ul>
         <div className="content-wrapper">        
           <ChatRoom />
         </div>

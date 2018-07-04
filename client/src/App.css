@@ -1,7 +1,9 @@
+@import url('https://fonts.googleapis.com/css?family=Lato');
+
 html, body {
   height: 100vh;
   
-  font-family: 'Microsoft JhengHei', '微軟正黑體', sans-serif;
+  font-family: 'Lato', 'Microsoft JhengHei', '微軟正黑體', sans-serif;
 }
 
 
@@ -10,18 +12,63 @@ html, body {
   height: 100%;
   width: 100%;
   position: absolute;
-  text-align: center;
+  text-align: left;
   display: flex;
   flex-direction: row;
   overflow: hidden;
+}
+
+.navbar {
+  margin: auto 0;
+  list-style-type: none;
+  width: 20%;
+  height: 100vh;
+  background-color: #4D3A4B;
+  box-shadow: 20 8px 20px 0 rgba(0,0,0,0.2);
+  color: rgb(206, 201, 206);
+  padding-left: 0;
+  font-weight: 100;
+}
+
+.navbar > li{
+  /* margin: 1vh; */
+  
+  font-size: 3vh;
+  margin-bottom: 1vh;
+  padding: 1vh 0 1vh 1vw;
+}
+
+.navbar > li:hover{
+  background-color: rgb(58, 44, 57);
+}
+
+
+.navbar > span {
+  color: rgb(206, 201, 206);
+}
+
+
+
+.inside-list {
+  padding-left: 0;
+}
+
+.inside-list > li:before{
+  content: "# ";
+  color: rgb(206, 201, 206);
   
 }
 
-nav {
-  width: 20%;
-  max-height: 100vh;
-  background-color: rgb(64, 37, 82);
-  box-shadow: 20 8px 20px 0 rgba(0,0,0,0.2);
+.inside-list > li {
+  list-style: none;
+  color: white;
+  padding-left: 0;
+}
+
+.inside-list > li:hover {
+  /* padding-left: 0; */
+  background-color: rgb(58, 44, 57);
+
 }
 
 .renderWrapper {
@@ -29,25 +76,41 @@ nav {
   background-color: #FAFAFC;
 }
 
+.group-title > h3 {
+  margin: auto 0;
+}
+
 .user {
-  height: 35%;
+  /* height: 35%; */
   display: flex;
-  flex-direction: column;
-  justify-content: center;
+  flex-direction: row;
+  /* justify-content: center; */
   align-items: center;
-  border-bottom: 2px #FAFAFC solid;
   
 }
 
-.user img {
-  margin-top: 3vh;
-  border-radius: 50%;
-  height: 20vh;
-  width: 10vw;
-  
+.user > img {
+  border-radius: 10%;
+  height: auto;
+  width: 3vw;
+  margin-right: 1vw;
 }
 
+.user-inside-list{
+  list-style: none;
+  padding-left: 0;
+}
 
+.user-inside-list > li:before {
+  content: "• ";
+  color: #529589;
+}
+
+.user-inside-list > li{
+
+}
+
+/* 
 .menu {
   height: 100%;
 }
@@ -61,15 +124,15 @@ nav {
   padding: 3vh;
   padding-right: 0;
   list-style-type: None;
-  text-align: center;
+  
 }
 
 .menu li:hover {
   padding: 3vh;
   list-style-type: None;
-  text-align: center;
+
   background-color: rgb(255, 252, 172);
-}
+} */
 
 .content-wrapper {
   
