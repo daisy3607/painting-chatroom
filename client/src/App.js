@@ -1,10 +1,12 @@
 import React, { Component } from 'react';
 import ChatRoom from './components/chatroom.js';
+import DashBoard from './components/dashboard.js';
 import Login from './components/login.js';
 import avatar from './images/avatar.png';
 import io from 'socket.io-client';
-
 import './App.css';
+
+
 
 export default class App extends Component {
   constructor(props) {
@@ -12,6 +14,7 @@ export default class App extends Component {
     this.state = {
       socket: io('http://localhost:4000'),
       msg_database: [],
+      todos: [],
     };
   }
 
@@ -32,6 +35,13 @@ export default class App extends Component {
   //   })
   // }
 
+  addTodo = (txt) => {
+    this.setState({
+      todos: [...this.state.todos, txt],
+    })
+  }
+
+
   callApi = async () => {
     const response = await fetch('/data');    
     const body = await response.json();
@@ -49,7 +59,7 @@ export default class App extends Component {
           <li className="user"><img src={avatar}></img><span>username</span></li>
           
           <li className="function-map">
-            <div onClick={this.handleDashBoard}>Dashboard</div>
+            <div onClick={this.handleDashBoard}>Tasks</div>
           </li>
           <li className="channel-map">
             <span>channel</span>
@@ -85,7 +95,8 @@ export default class App extends Component {
  
         </ul>
         <div className="content-wrapper">        
-          <ChatRoom />
+          {/* <ChatRoom /> */}
+          <DashBoard todos={this.state.todos} addTodo={this.addTodo}/>
         </div>
       </div>
     );

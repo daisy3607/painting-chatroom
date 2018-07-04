@@ -1,0 +1,89 @@
+.dashboard-wrapper {
+	height: 100%;
+}
+
+.gantt-container {
+	height: 50%;
+}
+
+.bottom-part {
+	display: flex;
+	flex-direction: row;
+	height: 50%;
+}
+
+.Calendar-container {
+	margin: 2vh 0 0 1vh;
+}
+
+
+
+.next_meeting {
+	width: 30%;
+	height: 92%;
+	margin: 1vw 0 0 1vw;
+	background-color: #fff;
+	border-radius: 6px;
+	box-shadow: 0 1px 30px 0 rgba(0,0,0,0.2);
+	text-align: center;
+}
+
+.next_meeting h3 {
+	font-size: 4vh;
+	background-color: rgb(143, 207, 210);
+	margin: 5% 8% 5% 8%;
+	padding: 2% 0 2% 0;
+	color: #fff;
+	font-weight: 100;
+}
+
+.next_meeting span {
+	font-size:16vh;
+	font-weight: 900;
+	color: rgb(143, 207, 210);
+}
+
+.next_meeting p {
+	font-size:5vh;
+	font-weight: 100;
+	color: rgb(143, 207, 210);
+}
+
+.next_todos {
+	width: 30%;
+	height: 92%;
+	margin: 1vw 0 0 1vw;
+	background-color: #fff;
+	text-align: center;
+	border-radius: 6px;
+	box-shadow: 0 1px 30px 0 rgba(0,0,0,0.2);
+}
+
+.next_todos h3 {
+	font-size: 4vh;
+	background-color: rgb(244, 176, 187);
+	margin: 5% 8% 3% 8%;
+	padding: 2% 0 2% 0;
+	color: #fff;
+	font-weight: 100;
+}
+
+.todo-input {
+    
+    
+	border: none;
+	border-bottom: 1px solid rgb(244, 176, 187);
+	width: 80%;
+	height: 10%;
+	color: rgb(244, 176, 187);
+	font-size: 3vh;
+	font-weight: 100;
+	text-align: center;
+}
+
+::placeholder {
+	color: rgb(244, 176, 187);
+	font-size: 3vh;
+	text-align: center;
+	font-weight: 100;
+}

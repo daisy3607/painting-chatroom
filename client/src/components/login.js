@@ -25,24 +25,13 @@ export default class Login extends Component {
 
 
   checkAccount = () => {
-    
-    if(this.state.account==="daisy" && this.state.password==="1234") {
-      this.props.setLogin();
-    }
-    else {
-      this.setState({
-        failMsg: true,
-      })
-    }
-    this.setState({
-      account: '',
-      password: '',
-    })
-    this.props.history.push('/')
+
+    this.checkAccount
+
   }
 
   registerAccount = () => {
-    console.log(this.state.account, this.state.password);
+    
   }
   
   handleKeyPress = (e) => {
