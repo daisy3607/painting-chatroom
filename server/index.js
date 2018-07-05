@@ -36,6 +36,8 @@ io.on('connection', (socket) => {
 
 app.get('*', (req, res) => res.sendfile('/index.html'));
 
-server.listen(4000, () => {
-  console.log("Server Started. http://localhost:4000");
+const port = process.env.PORT || 4000
+
+server.listen(port, () => {
+  console.log(`Server Started. http://localhost:${port}`);
 });
