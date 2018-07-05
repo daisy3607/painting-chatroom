@@ -5,7 +5,7 @@
   "main": "server/index.js",
   "scripts": {
     "start": "node server/index.js --presets env",
-    "heroku-postbuild": "cd client && yarn && npm run build && cd .. && cd server && yarn",
+    "heroku-postbuild": "cd client && yarn && npm run build",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -17,5 +17,9 @@
   "bugs": {
     "url": "https://github.com/daisy3607/final/issues"
   },
-  "homepage": "https://github.com/daisy3607/final#readme"
+  "homepage": "https://github.com/daisy3607/final#readme",
+  "dependencies": {
+    "express": "^4.16.3",
+    "socket.io": "^2.1.1"
+  }
 }
