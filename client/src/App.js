@@ -17,6 +17,7 @@ export default class App extends Component {
       socket: io('http://localhost:4000'),
       msg_database: [],
       todos: [],
+      showDashboard: true,
     };
   }
 
@@ -35,7 +36,15 @@ export default class App extends Component {
   //   this.setState({
   //     msg_database: {...this.state.msg_database, msg_data},
   //   })
+
   // }
+
+  handlePageChange = () => {
+    this.setState({
+      showDashboard: !(this.state.showDashboard),
+    })
+  }
+
 
   addTodo = (txt) => {
     this.setState({
@@ -58,12 +67,12 @@ export default class App extends Component {
         {/* <Login /> */}
         <ul className="navbar">
           <li className="group-title"><h3>顆顆顆顆顆小組</h3></li>
-          <li className="user"><img src={avatar}></img><span>username</span></li>
+          <li className="user"><img src={avatar}></img><span>Daisy</span></li>
 
-          <li className="function-map">
-            <div onClick={this.handleDashBoard}>Tasks</div>
+          <li onClick={this.handlePageChange} className="function-map">
+            <div>Tasks</div>
           </li>
-          <li className="channel-map">
+          <li onClick={this.handlePageChange} className="channel-map">
             <span>channel</span>
             <ul className="inside-list">
               <li>channel 1</li>
@@ -75,8 +84,7 @@ export default class App extends Component {
             <ul className="inside-list">
               <li>channel 1</li>
               <li>channel 1</li>
-              <li>channel 1</li>
-              <li>channel 1</li>
+
             </ul>
           </li>
           <li className="online-user-map">
@@ -84,8 +92,7 @@ export default class App extends Component {
             <ul className="user-inside-list">
               <li>user 1</li>
               <li>user 1</li>
-              <li>user 1</li>
-              <li>user 1</li>
+
             </ul>
           </li>
 
@@ -96,8 +103,12 @@ export default class App extends Component {
         </ul>
         <div className="content-wrapper">
           {/* <ChatRoom /> */}
-          <ChatRoom socket={this.state.socket} username="test1" / >
-          {/* <DashBoard todos={this.state.todos} addTodo={this.addTodo} /> */}
+          {this.state.showDashboard? (
+            <DashBoard todos={this.state.todos} addTodo={this.addTodo} />
+          ):(
+            <ChatRoom socket={this.state.socket} username="Daisy" />
+          )}
+
         </div>
       </div>
     );

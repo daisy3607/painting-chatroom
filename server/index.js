@@ -1,12 +1,12 @@
 const express = require('express');
+const path = require('path');
 const app = express();
+
 
 const server = require('http').Server(app);
 const io = require('socket.io')(server);
 
-app.get('/', (req, res) => {
-  res.send('Hello, World!');
-});
+app.use(express.static(path.join(__dirname, '..', 'client', 'build')));
 
 io.on('connection', (socket) => {
   // console.log('user connect');
@@ -33,6 +33,8 @@ io.on('connection', (socket) => {
     socket.broadcast.emit('remove messaging', msg);
   });
 })
+
+app.get('*', (req, res) => res.sendfile('/index.html'));
 
 server.listen(4000, () => {
   console.log("Server Started. http://localhost:4000");

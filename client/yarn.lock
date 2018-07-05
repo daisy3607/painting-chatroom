@@ -6051,9 +6051,9 @@ react-scroll@^1.7.9:
     lodash.throttle "^4.1.1"
     prop-types "^15.5.8"
 
-react-sketch@^0.4.4:
+"react-sketch@https://github.com/daisy3607/react-sketch.git":
   version "0.4.4"
-  resolved "https://registry.yarnpkg.com/react-sketch/-/react-sketch-0.4.4.tgz#e21d5e47e869c759225aa2667b245281a61b3c97"
+  resolved "https://github.com/daisy3607/react-sketch.git#6c6f11a739ea4bf91fa59b64b312660d463f94e6"
   dependencies:
     phantomjs-prebuilt "2.1.7"
     prop-types "^15.6.0"
