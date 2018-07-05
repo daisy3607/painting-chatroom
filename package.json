@@ -5,7 +5,7 @@
   "main": "server/index.js",
   "scripts": {
     "start": "node server/index.js --presets env",
-    "heroku-postbuild": "cd client && npm install && npm run build",
+    "heroku-postbuild": "cd client && yarn && npm run build && cd .. && cd server && yarn",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
